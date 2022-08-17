@@ -8,7 +8,8 @@ public class Aula01Recursividade {
 	public static void main(String[] args) {
 		RecursividadeController rec = new RecursividadeController();
 		Scanner ler = new Scanner(System.in);
-		int opc; //apoio = 0;
+		int opc; 
+//		boolean retorno = false;
 
 		do {			
 			System.out.println(""
@@ -42,7 +43,7 @@ public class Aula01Recursividade {
 				somaTotal = rec.soma(somaVet, TAM);
 				System.out.println("O resultado eh: " + somaTotal);
 				System.out.println("===========================================================");
-//				opc = continuar(apoio);
+//				retorno = continuar(retorno);
 				System.exit(0);
 				break;
 				
@@ -82,15 +83,16 @@ public class Aula01Recursividade {
 				break;
 				
 			case 4: // TAREFA 01 - exercicios 2
-				int wyl;				
+				int wyl;	
 				Scanner l = new Scanner(System.in);
-				do {				
-					System.out.println("Digite um numero");
-					wyl = l.nextInt();
-					l.close();				
-				}while(wyl<0 && wyl>2000);
 				
-			    System.out.println(rec.binario(wyl));
+				do {					
+					System.out.println("Digite um numero");
+					wyl = l.nextInt();									
+				}while(wyl<0 || wyl>2000);
+				l.close();
+				
+				System.out.println(rec.binario(wyl));
 				System.out.println("===========================================================");
 				System.exit(0);
 				break;
@@ -106,7 +108,7 @@ public class Aula01Recursividade {
 			default:
 				System.out.println("Pfv, só os numeros indicados");
 			}
-		} while (opc != 9);
+		} while (opc != 9); //(opc != 9 || retorno == false);
 		ler.close();
 	}
 	
@@ -115,7 +117,7 @@ public class Aula01Recursividade {
 // DAS TAREFAS
 //=====================================================================================================
 //=====================================================================================================	
-//	public static int continuar(int retorno){
+//	public boolean continuar(boolean retorno){
 //		int resp;
 //		Scanner lendo = new Scanner(System.in);
 //		
@@ -125,21 +127,22 @@ public class Aula01Recursividade {
 //			System.out.println("2 = no");
 //			
 //			resp = lendo.nextInt();
-//			lendo.close();
 //			
-//			if(resp == 1) {
-//				retorno = 8;
-//				return retorno;
+//			
+//			if(resp == 1) {	
+//				lendo.close();
+//				return true;
 //			}
-//			else if(resp == 2){
-//				retorno = 9;
-//				return retorno;
+//			else if(resp == 2){	
+//				lendo.close();
+//				return false;
 //			}
 //			else {
 //				System.out.println("Somente os valores apresentados");
 //			}			
 //		}while(resp != 1 || resp != 2);
-//		return 0;
+//		lendo.close();
+//		return false;
 //	}
 }
 
