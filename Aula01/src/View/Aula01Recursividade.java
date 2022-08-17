@@ -82,12 +82,13 @@ public class Aula01Recursividade {
 				break;
 				
 			case 4: // TAREFA 01 - exercicios 2
-				int wyl;
+				int wyl;				
 				Scanner l = new Scanner(System.in);
-				
-				System.out.println("Digite um numero");
-				wyl = l.nextInt();
-				l.close();				
+				do {				
+					System.out.println("Digite um numero");
+					wyl = l.nextInt();
+					l.close();				
+				}while(wyl<0 && wyl>2000);
 				
 			    System.out.println(rec.binario(wyl));
 				System.out.println("===========================================================");
@@ -110,7 +111,8 @@ public class Aula01Recursividade {
 	}
 	
 
-	
+// AINDA NÃO TERMINEI FUNÇÃO PRA PERGUNTAR SE A PESSOA QUER OU NÃO CONTINUAR APÓS A EXECUÇÃO DE UMA
+// DAS TAREFAS
 //=====================================================================================================
 //=====================================================================================================	
 //	public static int continuar(int retorno){

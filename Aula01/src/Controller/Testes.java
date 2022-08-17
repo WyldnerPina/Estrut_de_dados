@@ -101,8 +101,19 @@ public class Testes {
 //			r = Resto(x, n - x);
 //			return r;
 //		}
-	//	
-	//}
+	//
 	
 	
+	
+	//public int Resto(int n, int c) {
+//	int c;
+//		if(n <= 0) {	
+//			return n;
+//		} else {	
+//		num = Math.pow(10, c)*(num % 2) + (binario(num/2, c);
+//		c++;	
+//		return num;
+//		}
+//	
+//	}	
 }
